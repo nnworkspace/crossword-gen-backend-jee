@@ -30,7 +30,7 @@ println  "  projectDir:   ${project.projectDir}"
 
 
 task genServerStubFromOpenApi(type: GradleBuild) {
-    buildFile = "../api/build.gradle".toString()
+    buildFile = '../api/build.gradle'
     tasks = ['codegen']
 }
 
@@ -40,7 +40,7 @@ task copyGenCode(dependsOn: ['genServerStubFromOpenApi']) {
 
     // then copy
     copy{
-        from "../api/build/server-jaxrs-cxf-cdi/src/gen".toString()
+        from '../api/build/server-jaxrs-cxf-cdi/src/gen'
         into "${project.projectDir}/src/gen".toString()
     }
 }
