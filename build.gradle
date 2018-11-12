@@ -22,6 +22,13 @@ println  "  rootDir:      ${project.rootDir}"
 println  "  projectDir:   ${project.projectDir}"
 
 
+// TODO: add gen/java to java source dir
+// TODO: build a war file
+// TODO: start a local server and deploy the war file
+// TODO: build docker image for local testing
+// 
+
+
 task genServerStubFromOpenApi(type: GradleBuild) {
     buildFile = "../api/build.gradle".toString()
     tasks = ['codegen']
