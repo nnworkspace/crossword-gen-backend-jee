@@ -1,0 +1,39 @@
+plugins {
+    id 'java'
+}
+
+group 'org.ningning.crossword_gen'
+version '0.0.1-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+
+println '################## project path: ################'
+println  "Root project:   ${project.rootProject}"
+println  "  rootDir:      ${project.rootDir}"
+println  "  projectDir:   ${project.projectDir}"
+
+
+task genServerStubFromOpenApi(type: GradleBuild) {
+    buildFile = "../api/build.gradle".toString()
+    tasks = ['codegen']
+}
+
+task copyGenCode(dependsOn: ['genServerStubFromOpenApi']) {
+    // clean up first, make sure the latest api stub is fetched
+    delete 'src/gen/java'
+
+    // then copy
+    copy{
+        from "../api/build/server-jaxrs-cxf-cdi/src/gen".toString()
+        into "${project.projectDir}/src/gen".toString()
+    }
+}
