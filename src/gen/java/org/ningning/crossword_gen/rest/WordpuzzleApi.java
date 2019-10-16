@@ -26,7 +26,7 @@ import javax.validation.constraints.*;
 @Api(description = "the wordpuzzle API")
 
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJAXRSCXFCDIServerCodegen", date = "2018-11-13T11:58:02.617+01:00[Europe/Berlin]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJAXRSCXFCDIServerCodegen", date = "2019-10-16T12:17:59.096598700+02:00[Europe/Berlin]")
 
 public class WordpuzzleApi  {
 
@@ -43,7 +43,7 @@ public class WordpuzzleApi  {
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "word puzzle generator response", response = PuzzleAndSolutions.class, responseContainer = "List"),
         @ApiResponse(code = 200, message = "unexpected error", response = Error.class) })
-    public Response wordpuzzle( @Min(1) @ApiParam(value = "specifies number of rows in the puzzle board", defaultValue="8") @DefaultValue("8") @QueryParam("rows") Integer rows,  @Min(1) @ApiParam(value = "specifies number of columns in the puzzle board", defaultValue="8") @DefaultValue("8") @QueryParam("cols") Integer cols,  @ApiParam(value = "specifies how full should the board be filled. A value between 0.1 to 1.0 is allowed. However, a high value close to 1.0 can be difficult to fullfil. Values such as 0.75f or 0.875f are recommended. ")  @QueryParam("density") Float density,  @Min(3) @ApiParam(value = "specifies the length of the shortest word allowed.", defaultValue="5") @DefaultValue("5") @QueryParam("shortestWordLength") Integer shortestWordLength) {
+    public Response wordpuzzle( @Min(1)@ApiParam(value = "specifies number of rows in the puzzle board", defaultValue="8") @DefaultValue("8")  @QueryParam("rows") Integer rows,  @Min(1)@ApiParam(value = "specifies number of columns in the puzzle board", defaultValue="8") @DefaultValue("8")  @QueryParam("cols") Integer cols, @ApiParam(value = "specifies how full should the board be filled. A value between 0.1 to 1.0 is allowed. However, a high value close to 1.0 can be difficult to fullfil. Values such as 0.75f or 0.875f are recommended. ")  @QueryParam("density") Float density,  @Min(3)@ApiParam(value = "specifies the length of the shortest word allowed.", defaultValue="5") @DefaultValue("5")  @QueryParam("shortestWordLength") Integer shortestWordLength) {
         return delegate.wordpuzzle(rows, cols, density, shortestWordLength, securityContext);
     }
 }
