@@ -60,6 +60,7 @@ fabric.properties
 # Editor-based Rest Client
 .idea/httpRequests
 ### Gradle template
+/.gradle/
 .gradle
 /build/
 
@@ -79,5 +80,16 @@ gradle-app.setting
 # /gradlew.bat
 /.idea/
 /.gradle/
+/bin/
 .settings/org.eclipse.buildship.core.prefs
 .project
+.classpath
+.settings/org.eclipse.jdt.core.prefs
+.gradle/4.8/fileChanges/last-build.bin
+.gradle/4.8/fileHashes/fileHashes.bin
+.gradle/4.8/fileHashes/fileHashes.lock
+.gradle/4.8/taskHistory/taskHistory.bin
+.gradle/4.8/taskHistory/taskHistory.lock
+.gradle/buildOutputCleanup/buildOutputCleanup.lock
+.gradle/buildOutputCleanup/cache.properties
+.gradle/buildOutputCleanup/outputFiles.bin
