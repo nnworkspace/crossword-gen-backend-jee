@@ -26,7 +26,7 @@ import javax.validation.constraints.*;
 @Api(description = "the wordpuzzle API")
 
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJAXRSCXFCDIServerCodegen", date = "2019-10-16T12:17:59.096598700+02:00[Europe/Berlin]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJAXRSCXFCDIServerCodegen", date = "2019-10-16T15:05:32.223488700+02:00[Europe/Berlin]")
 
 public class WordpuzzleApi  {
 
